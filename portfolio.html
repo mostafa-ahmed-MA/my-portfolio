@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostafa Abdelsalam | DevOps Engineer</title>
+    <!-- Google Fonts (Inter for clean, professional English text) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#0f172a', // Slate 900
+                        secondary: '#1e293b', // Slate 800
+                        accent: '#14b8a6', // Teal 500
+                        accentHover: '#0d9488', // Teal 600
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Animations & Effects */
+        .glass-nav {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px -10px rgba(20, 184, 166, 0.3);
+            border-color: rgba(20, 184, 166, 0.5);
+        }
+        .skill-badge {
+            transition: all 0.3s ease;
+        }
+        .skill-badge:hover {
+            background-color: rgba(20, 184, 166, 0.1);
+            color: #14b8a6;
+            border-color: #14b8a6;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-primary text-gray-300 font-sans antialiased selection:bg-accent selection:text-white">
+
+    <!-- Navigation Bar -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 font-bold text-2xl text-white tracking-wider">
+                  <div class="flex-shrink-0 font-bold text-2xl text-white tracking-wider">
+   <div class="flex-shrink-0 font-bold text-2xl text-white tracking-wider">
+    <div class="flex-shrink-0 font-bold text-2xl text-white tracking-wider">
+   <div class="flex-shrink-0 font-bold text-2xl text-white tracking-wider flex items-center">
+    <span class="text-accent animate-pulse mr-1">_</span>
+    <span>MA</span>
+    <span class="text-accent text-4xl ml-1 inline-flex items-center" style="line-height: 0; transform: translateY(1px);">
+        &infin;
+    </span>
+</div>
+</div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#about" class="hover:text-accent transition-colors px-3 py-2 rounded-md text-sm font-semibold">About</a>
+                        <a href="#skills" class="hover:text-accent transition-colors px-3 py-2 rounded-md text-sm font-semibold">Skills</a>
+                        <a href="#experience" class="hover:text-accent transition-colors px-3 py-2 rounded-md text-sm font-semibold">Experience</a>
+                        <a href="#projects" class="hover:text-accent transition-colors px-3 py-2 rounded-md text-sm font-semibold">Projects</a>
+                        <a href="#contact" class="hover:text-accent transition-colors px-3 py-2 rounded-md text-sm font-semibold">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="pt-32 pb-20 md:pt-40 md:pb-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12">
+        <div class="md:w-3/5 text-center md:text-left">
+            <h2 class="text-accent font-bold tracking-wide mb-2 text-lg">Hello, I'm</h2>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-4 leading-tight">
+                Mostafa Abdelsalam
+            </h1>
+            <h3 class="text-2xl md:text-3xl text-gray-400 font-semibold mb-6">
+                <span class="text-white">DevOps Engineer.
+            </h3>
+            <p class="text-lg text-gray-400 mb-8 max-w-2xl leading-relaxed mx-auto md:mx-0">
+I help companies deploy faster and scale smarter. Expert in building resilient CI/CD pipelines and managing cloud-native environments with AWS & Kubernetes.            </p>
+            <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                <a href="#projects" class="bg-accent text-white px-8 py-3 rounded-lg font-bold hover:bg-accentHover transition-all flex items-center gap-2 shadow-lg shadow-accent/30">
+                    <i class="fas fa-rocket"></i> Explore My Work
+                </a>
+                <a href="mailto:3bdelsalam111@gmail.com" 
+                  target="_blank" 
+                   rel="noopener noreferrer"
+                    class="border border-accent text-accent px-6 py-3 rounded-lg font-bold hover:bg-accent hover:text-primary transition-all flex items-center gap-2">                    <i class="fas fa-envelope"></i> Get in Touch
+                </a>
+                <a href="https://drive.google.com/file/d/12__CnnKC1Zx1AcXUnQWO4HM4BhSPLNoj/view?usp=drivesdk" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="border border-accent text-accent px-6 py-3 rounded-lg font-bold hover:bg-accent hover:text-primary transition-all flex items-center gap-2">
+        <i class="fas fa-file-download"></i> Download CV
+    </a>
+            </div>
+        </div>
+        
+        <div class="md:w-2/5 flex justify-center">
+         <div class="relative w-72 h-72 md:w-96 md:h-96 rounded-full border-4 border-accent p-2 shadow-2xl shadow-accent/20 group">        
+        <img src="my-pic.jpg" 
+             alt="Mostafa Abdelsalam" 
+             class="w-full h-full object-cover rounded-full z-10 relative transition-transform duration-500 group-hover:scale-105 shadow-inner"
+        style="object-position: center 30%;">
+        <div class="absolute inset-0 border-4 border-accent rounded-full animate-ping opacity-20"></div>
+    </div>
+</div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-secondary/30 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center gap-4 mb-12">
+                <h2 class="text-3xl font-bold text-white">About Me</h2>
+                <div class="h-px bg-gray-700 flex-1"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="text-lg leading-relaxed text-gray-400 space-y-4">
+                    <p>
+                        I am an Electrical and Communications Engineer with a specialized technical background in <strong>Network Infrastructure and DevOps practices</strong>.
+                    </p>
+                    <p>
+                        Through intensive training at prestigious institutions like <strong>DEPI, ITI, and NTI</strong>, I have acquired proven hands-on expertise in Linux System Administration, Network Configuration (CCNA level), and Cloud Fundamentals (AWS).
+                    </p>
+                    <p>
+                        My core focus is on minimizing manual intervention by writing clean infrastructure code (IaC) and automating the software delivery lifecycle. I thrive in environments where I can utilize <strong>Jenkins, Docker, Kubernetes, and Terraform</strong> to build scalable, secure, and fault-tolerant systems.
+                    </p>
+                </div>
+                <div class="bg-secondary p-8 rounded-2xl border border-gray-700 shadow-xl">
+                    <h3 class="text-xl font-bold text-white mb-6 border-b border-gray-700 pb-3">
+                        <i class="fas fa-graduation-cap text-accent mr-2"></i> Academic Background
+                    </h3>
+                    <div class="mb-4">
+                        <h4 class="text-accent font-bold text-lg">Higher Technological Institute, 10th of Ramadan</h4>
+                        <p class="text-white font-semibold">B.Sc. in Communications & Electronics Engineering</p>
+                        <p class="text-gray-400 text-sm mt-1"><i class="far fa-calendar-alt mr-1"></i> 2021 - 2026</p>
+                    </div>
+                    <p class="text-sm text-gray-400 mt-4 leading-relaxed">
+                        <strong class="text-gray-300">Relevant Coursework:</strong> Computer Networks, Communication Systems, Operating Systems, Digital Logic Design, Cloud & DevOps.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center gap-4 mb-16">
+            <h2 class="text-3xl font-bold text-white">Technical Arsenal</h2>
+            <div class="h-px bg-gray-700 flex-1"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Cloud & IaC -->
+            <div class="bg-secondary/50 p-6 rounded-xl border border-gray-700 hover:border-accent transition-colors">
+                <div class="text-accent text-3xl mb-4"><i class="fas fa-cloud"></i></div>
+                <h3 class="text-white text-xl font-bold mb-4">Cloud & IaC</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="skill-badge px-3 py-1 bg-primary border border-gray-600 rounded-full text-sm">AWS (EC2, VPC, IAM)</span>
+                    <span class="skill-badge px-3 py-1 bg-primary border border-gray-600 rounded-full text-sm">Terraform</span>
+                    <span class="skill-badge px-3 py-1 bg-primary border border-gray-600 rounded-full text-sm">CloudFormation</span>
+                </div>
+            </div>
+
+            <!-- CI/CD & Automation -->
+            <div class="bg-secondary/50 p-6 rounded-xl border border-gray-700 hover:border-accent transition-colors">
+                <div class="text-accent text-3xl mb-4"><i class="fas fa-code-branch"></i></div>
+                <h3 class="text-white text-xl font-bold mb-4">CI/CD & Automation</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="skill-badge px-3 py-1 bg-primary border border-gray-600 rounded-full text-sm">Jenkins</span>
+                    <span class="skill-badge px-3 py-1 bg-primary border border-gray-600 rounded-full text-sm">GitHub Actions</span>
+                    <span class="skill-badge px-3 py-1 bg-primary border border-gray-600 rounded-full text-sm">Git</span>
+                </div>
+            </div>
+
+            <!-- Containerization -->
+            <div class="bg-secondary/50 p-6 rounded-xl border border-gray-700 hover:border-accent transition-colors">
+                <div class="text-accent text-3xl mb-4"><i class="fab fa-docker"></i></div>
+                <h3 class="text-white text-xl font-bold mb-4">Containers & Orchestration</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="skill-badge px-3 py-1 bg-primary border border-gray-600 rounded-full text-sm">Docker</span>
+                    <span class="skill-badge px-3 py-1 bg-primary border border-gray-600 rounded-full text-sm">Kubernetes (K8s)</span>
+                    <span class="skill-badge px-3 py-1 bg-primary border border-gray-600 rounded-full text-sm">Microservices</span>
+                </div>
+            </div>
+
+            <!-- Linux & Networking -->
+            <div class="bg-secondary/50 p-6 rounded-xl border border-gray-700 hover:border-accent transition-colors">
+                <div class="text-accent text-3xl mb-4"><i class="fab fa-linux"></i></div>
+                <h3 class="text-white text-xl font-bold mb-4">Systems & Network</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="skill-badge px-3 py-1 bg-primary border border-gray-600 rounded-full text-sm">Linux Administration</span>
+                    <span class="skill-badge px-3 py-1 bg-primary border border-gray-600 rounded-full text-sm">Bash Scripting</span>
+                    <span class="skill-badge px-3 py-1 bg-primary border border-gray-600 rounded-full text-sm">CCNA Routing</span>
+                    <span class="skill-badge px-3 py-1 bg-primary border border-gray-600 rounded-full text-sm">TCP/IP & VLANs</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-secondary/30 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center gap-4 mb-16">
+                <h2 class="text-3xl font-bold text-white">Professional Training & Experience</h2>
+                <div class="h-px bg-gray-700 flex-1"></div>
+            </div>
+
+            <div class="space-y-12">
+                <!-- DEPI -->
+                <div class="relative">
+                    <div class="md:flex items-center justify-between mb-2">
+                        <h3 class="text-2xl font-bold text-white">DevOps Engineer Trainee <span class="text-accent text-lg font-normal">(Advanced Track)</span></h3>
+                        <div class="text-accent font-semibold mt-2 md:mt-0"><i class="far fa-calendar-alt mr-1"></i> Dec 2025 - Present</div>
+                    </div>
+                    <div class="text-xl text-gray-300 mb-4 font-semibold">Digital Egypt Pioneers Initiative (DEPI)</div>
+                    <ul class="list-none space-y-3 text-gray-400">
+                        <li class="flex items-start"><i class="fas fa-check-circle text-accent mt-1.5 mr-3 text-sm"></i> <span><strong>Advanced CI/CD:</strong> Engineered complex automation pipelines using Jenkins and GitHub Actions to streamline end-to-end software delivery.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-accent mt-1.5 mr-3 text-sm"></i> <span><strong>Infrastructure as Code (IaC):</strong> Implemented automated infrastructure provisioning on AWS cloud using Terraform and CloudFormation.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-accent mt-1.5 mr-3 text-sm"></i> <span><strong>Scalable Operations:</strong> Orchestrated microservices using Kubernetes and Docker to ensure high availability and system reliability.</span></li>
+                    </ul>
+                </div>
+
+                <!-- ITI -->
+                <div class="relative pt-8 border-t border-gray-700">
+                    <div class="md:flex items-center justify-between mb-2">
+                        <h3 class="text-2xl font-bold text-white">Cloud & DevOps Trainee</h3>
+                        <div class="text-accent font-semibold mt-2 md:mt-0"><i class="far fa-calendar-alt mr-1"></i> Jun 2025 - Aug 2025</div>
+                    </div>
+                    <div class="text-xl text-gray-300 mb-4 font-semibold">Information Technology Institute (ITI)</div>
+                    <ul class="list-none space-y-3 text-gray-400">
+                        <li class="flex items-start"><i class="fas fa-check-circle text-accent mt-1.5 mr-3 text-sm"></i> <span>Mastered advanced Linux administration and networking fundamentals as a solid foundation for cloud infrastructure.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-accent mt-1.5 mr-3 text-sm"></i> <span>Gained hands-on experience in building, managing, and optimizing Docker containers.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-accent mt-1.5 mr-3 text-sm"></i> <span>Developed Bash scripts to automate repetitive operational tasks and system monitoring.</span></li>
+                    </ul>
+                </div>
+
+                 <!-- NTI -->
+                 <div class="relative pt-8 border-t border-gray-700">
+                    <div class="md:flex items-center justify-between mb-2">
+                        <h3 class="text-2xl font-bold text-white">Network Engineering Trainee</h3>
+                        <div class="text-accent font-semibold mt-2 md:mt-0"><i class="far fa-calendar-alt mr-1"></i> Jun 2024 - Aug 2024</div>
+                    </div>
+                    <div class="text-xl text-gray-300 mb-4 font-semibold">National Telecommunication Institute (NTI)</div>
+                    <ul class="list-none space-y-3 text-gray-400">
+                        <li class="flex items-start"><i class="fas fa-check-circle text-accent mt-1.5 mr-3 text-sm"></i> <span>Configured and troubleshot complex LAN networks consisting of Cisco Routers and Switches.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-accent mt-1.5 mr-3 text-sm"></i> <span>Implemented routing protocols and designed network topologies, validating configurations via Cisco Packet Tracer.</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center gap-4 mb-16">
+            <h2 class="text-3xl font-bold text-white">Featured DevOps Projects</h2>
+            <div class="h-px bg-gray-700 flex-1"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <!-- Project 1: CI/CD Pipeline -->
+            <div class="project-card bg-secondary rounded-xl overflow-hidden border border-gray-700 flex flex-col h-full relative group">
+                <!-- Decorative top border -->
+                <div class="h-2 w-full bg-gradient-to-r from-accent to-blue-500"></div>
+                <div class="p-8 flex-1 flex flex-col">
+                    <div class="flex justify-between items-start mb-6">
+                        <i class="fas fa-network-wired text-4xl text-accent"></i>
+                        <a href="https://github.com/mostafa-ahmed-MA/patient-web-interface" target="_blank" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-github text-xl"></i></a>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3 tracking-tight">End-to-End DevOps Pipeline</h3>
+                    <p class="text-gray-400 mb-6 flex-1 text-sm leading-relaxed">
+                        Provisioned cloud infrastructure on <span class="text-gray-200 font-bold">AWS</span> entirely via code using <span class="text-gray-200 font-bold">Terraform (IaC)</span>. Designed and implemented automated deployment workflows with <span class="text-gray-200 font-bold">Jenkins CI/CD</span>. Containerized applications using <span class="text-gray-200 font-bold">Docker</span> to guarantee environment consistency across the entire Software Development Life Cycle (SDLC).
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-auto pt-6 border-t border-gray-700/50">
+                        <span class="text-xs font-mono text-accent bg-accent/10 px-2 py-1 rounded">AWS</span>
+                        <span class="text-xs font-mono text-accent bg-accent/10 px-2 py-1 rounded">Terraform</span>
+                        <span class="text-xs font-mono text-accent bg-accent/10 px-2 py-1 rounded">Jenkins</span>
+                        <span class="text-xs font-mono text-accent bg-accent/10 px-2 py-1 rounded">Docker</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: Linux Automation -->
+            <div class="project-card bg-secondary rounded-xl overflow-hidden border border-gray-700 flex flex-col h-full relative group">
+                <div class="h-2 w-full bg-gradient-to-r from-purple-500 to-accent"></div>
+                <div class="p-8 flex-1 flex flex-col">
+                    <div class="flex justify-between items-start mb-6">
+                        <i class="fas fa-terminal text-4xl text-accent"></i>
+                        <a href="https://github.com/mostafa-ahmed-MA" target="_blank" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-github text-xl"></i></a>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3 tracking-tight">Linux Automation Lab</h3>
+                    <p class="text-gray-400 mb-6 flex-1 text-sm leading-relaxed">
+                        Developed advanced <span class="text-gray-200 font-bold">Bash scripts</span> to fully automate routine administrative tasks including system backups, user management, and performance monitoring. Configured <span class="text-gray-200 font-bold">LVM storage</span> and managed critical system services to ensure high availability and robust security for server environments.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-auto pt-6 border-t border-gray-700/50">
+                        <span class="text-xs font-mono text-accent bg-accent/10 px-2 py-1 rounded">Linux Admin</span>
+                        <span class="text-xs font-mono text-accent bg-accent/10 px-2 py-1 rounded">Bash Scripting</span>
+                        <span class="text-xs font-mono text-accent bg-accent/10 px-2 py-1 rounded">LVM</span>
+                        <span class="text-xs font-mono text-accent bg-accent/10 px-2 py-1 rounded">Cron</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3: Network Infrastructure -->
+            <div class="project-card bg-secondary rounded-xl overflow-hidden border border-gray-700 flex flex-col h-full relative group">
+                <div class="h-2 w-full bg-gradient-to-r from-blue-500 to-accent"></div>
+                <div class="p-8 flex-1 flex flex-col">
+                    <div class="flex justify-between items-start mb-6">
+                        <i class="fas fa-shield-alt text-4xl text-accent"></i>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fas fa-external-link-alt text-xl"></i></a>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3 tracking-tight">Enterprise Network Design</h3>
+                    <p class="text-gray-400 mb-6 flex-1 text-sm leading-relaxed">
+                        Engineered a secure, highly available multi-branch network topology using <span class="text-gray-200 font-bold">Cisco Packet Tracer</span>. Implemented <span class="text-gray-200 font-bold">VLANs, OSPF, and NAT</span> protocols. Optimized IP allocation using VLSM subnetting and established robust network security perimeters by implementing strict Access Control Lists (<span class="text-gray-200 font-bold">ACLs</span>).
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-auto pt-6 border-t border-gray-700/50">
+                        <span class="text-xs font-mono text-accent bg-accent/10 px-2 py-1 rounded">Cisco</span>
+                        <span class="text-xs font-mono text-accent bg-accent/10 px-2 py-1 rounded">OSPF & NAT</span>
+                        <span class="text-xs font-mono text-accent bg-accent/10 px-2 py-1 rounded">VLSM</span>
+                        <span class="text-xs font-mono text-accent bg-accent/10 px-2 py-1 rounded">ACL Security</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact & Footer -->
+    <footer id="contact" class="bg-secondary/80 border-t border-gray-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-white mb-6">Ready to Build Something Great?</h2>
+            <p class="text-gray-400 max-w-2xl mx-auto mb-10 text-lg">
+                I am actively seeking new challenges and opportunities to contribute to robust, automated environments. Feel free to reach out if you're looking for a dedicated DevOps engineer to add value to your team.
+            </p>
+            
+            <a href="mailto:3bdelsalam111@gmail.com" class="inline-block bg-accent text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-accentHover transition-all shadow-lg shadow-accent/30 mb-16">
+                <i class="fas fa-paper-plane mr-2"></i> Send an Email
+            </a>
+            <div class="mt-2 mb-12 flex justify-center">
+    <a href="tel:+201552875442" 
+       class="group flex items-center gap-3 bg-white/5 border border-white/10 px-6 py-3 rounded-2xl hover:border-accent hover:bg-accent/5 transition-all duration-300">
+        
+        <div class="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center group-hover:bg-accent transition-colors">
+            <i class="fas fa-phone-alt text-accent group-hover:text-white animate-pulse"></i>
+        </div>
+
+        <div class="flex flex-col items-start">
+            <span class="text-[10px] uppercase tracking-[0.2em] text-gray-500 group-hover:text-accent transition-colors">Direct Call</span>
+            <span class="text-xl font-mono font-bold text-gray-300 tracking-tighter group-hover:text-white">
+                +2 0155 287 5442
+            </span>
+        </div>
+    </a>
+</div>
+
+            <!-- QR Codes Section -->
+           <div class="flex flex-col md:flex-row justify-center items-center gap-12 mb-16 border-b border-gray-700 pb-16">
+    
+    <a href="https://linkedin.com/in/mostafa-abdelsalam" target="_blank" class="group block">
+        <div class="bg-primary p-6 rounded-xl border border-gray-700 shadow-xl flex flex-col items-center group-hover:border-accent group-hover:-translate-y-2 transition-all duration-300 cursor-pointer">
+            <h3 class="text-white font-bold mb-4 flex items-center gap-2 group-hover:text-accent transition-colors">
+                <i class="fab fa-linkedin text-blue-500 text-2xl group-hover:text-accent"></i> Connect on LinkedIn
+            </h3>
+            <div class="bg-white p-2 rounded-lg">
+                <img src="linkedin-qr.jpg" alt="LinkedIn QR Code" class="w-40 h-40 object-cover" onerror="this.src='https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.linkedin.com/in/mostafa-abdelsalam-/'">
+            </div>
+            <span class="text-gray-400 text-xs mt-3 group-hover:text-white transition-colors">Click to visit profile</span>
+        </div>
+    </a>
+
+    <a href="https://github.com/your-github-mostafa-ahmed-MA" target="_blank" class="group block">
+        <div class="bg-primary p-6 rounded-xl border border-gray-700 shadow-xl flex flex-col items-center group-hover:border-accent group-hover:-translate-y-2 transition-all duration-300 cursor-pointer">
+            <h3 class="text-white font-bold mb-4 flex items-center gap-2 group-hover:text-accent transition-colors">
+                <i class="fab fa-github text-white text-2xl group-hover:text-accent"></i> Check my Repositories
+            </h3>
+            <div class="bg-white p-2 rounded-lg">
+                <img src="github-qr.jpg" alt="GitHub QR Code" class="w-40 h-40 object-cover" onerror="this.src='https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://github.com/mostafa-ahmed-MA'">
+            </div>
+            <span class="text-gray-400 text-xs mt-3 group-hover:text-white transition-colors">Click to see my code</span>
+        </div>
+    </a>
+
+</div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-gray-500 text-sm">
+                <p>&copy; 2026 Mostafa Abdelsalam. All rights reserved.</p>
+                <div class="flex gap-6 text-lg">
+                    <a href="https://linkedin.com" target="_blank" class="hover:text-accent transition-colors"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com" target="_blank" class="hover:text-accent transition-colors"><i class="fab fa-github"></i></a>
+                    <a href="mailto:3bdelsalam111@gmail.com" class="hover:text-accent transition-colors"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
